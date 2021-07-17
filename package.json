@@ -1,7 +1,7 @@
 {
-  "name": "eyeos-run-server",
+  "name": "nerteron-eyeos-run-server",
   "version": "0.0.130",
-  "description": "encapsulates different process as one",
+  "description": "fork of eyeos-run-server",
   "main": "src/eyeos-run-server.js",
   "author": "eyeOS",
   "homepage": "http://www.eyeos.com/",
