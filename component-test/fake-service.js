@@ -17,8 +17,7 @@
     along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#!/usr/bin/node
-var dns = require('dns');
+const  dns = require('dns');
 
 dns.lookup('component.service.consul', function onLookup(err, addresses, family) {
   console.log('addresses:', addresses);

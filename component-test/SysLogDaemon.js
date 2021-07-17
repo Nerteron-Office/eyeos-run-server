@@ -17,18 +17,18 @@
     along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-var net = require('net');
-var util = require("util");
-var EventEmitter = require('events').EventEmitter;
+const net = require('net');
+const util = require("util");
+const EventEmitter = require('events').EventEmitter;
 
-var SysLogDaemon = function(settings) {
+const SysLogDaemon = function(settings) {
 	this.server = net.createServer();
 	this.messageCount = 0;
 	this.connections = [];
 	this.running = false;
 	this.settings = settings;
 
-	var self = this;
+	let self = this;
 	this.server.on('connection', function(con) {
 		self.connections.push(con);
 		con.on('data', function(data) {
@@ -39,7 +39,7 @@ var SysLogDaemon = function(settings) {
 		});
 
 		con.once('close', function() {
-			var i = self.connections.indexOf(con);
+			let i = self.connections.indexOf(con);
 			self.connections = self.connections.splice(i, 1);
 		});
 	});

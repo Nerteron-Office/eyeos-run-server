@@ -17,14 +17,14 @@
     along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-var sinon = require('sinon');
-var assert = require('chai').assert;
+const sinon = require('sinon');
+const assert = require('chai').assert;
 
-var LoggerFactory = require('../src/lib/LoggerFactory');
-var SysLogDaemon = require('./SysLogDaemon');
+const LoggerFactory = require('../src/lib/LoggerFactory');
+const SysLogDaemon = require('./SysLogDaemon');
 
 suite('Logger', function() {
-	var factory, sut, daemon, settings;
+	let factory, sut, daemon, settings;
 
 	setup(function() {
 		settings = {
